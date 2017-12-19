@@ -16,8 +16,8 @@ docker_image = andresherrera/dshtpheno
 Executable   = Rscript
 Arguments    = VI2.R micasense_image.tif 3 2 1 4 5 micasense_image
 
-#request_cpus = 4
-#request_memory = 8192 M
-#request_disk = 8192 M
-#Queue 1
-Queue
+request_cpus = 4
+request_memory = 8192 M
+request_disk = 8192 M
+Queue 1
+#Queue
