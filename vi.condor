@@ -1,0 +1,23 @@
+##
+# Use: condor_submit vi.condor
+#Universe   = vanilla
+Universe   = docker
+
+Transfer_executable = false
+should_transfer_files = Yes
+when_to_transfer_output = ON_EXIT_OR_EVICT
+transfer_input_files = VI2.R, data/input/micasense_image.tif
+
+Log        = Log.$(Process).$(Cluster).txt
+Output     = Out.$(Process).$(Cluster).txt
+Error      = Err.$(Process).$(Cluster).txt
+
+docker_image = andresherrera/dshtpheno
+Executable   = Rscript
+Arguments    = VI2.R micasense_image.tif 3 2 1 4 5 micasense_image
+
+#request_cpus = 4
+#request_memory = 8192 M
+#request_disk = 8192 M
+#Queue 1
+Queue

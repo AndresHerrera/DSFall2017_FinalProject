@@ -1,0 +1,6 @@
+*.tif
+!data/*.shp
+!spec/*.tif
+*.shp
+!data/*.tif
+*.txt
