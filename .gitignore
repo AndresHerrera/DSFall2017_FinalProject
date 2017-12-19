@@ -4,3 +4,9 @@
 *.shp
 !data/*.tif
 *.txt
+*.bashrc
+*.profle
+*.viminfo
+*.bash_logout
+*.bash_history
+
